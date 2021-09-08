@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barutta.showcase()</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <audio autoplay>
+        <source src="../static/audio/sound.mp3" type="audio/mpeg" />
+      </audio>
+    <div class="myName">
+        <p>AndreaBarutta</p>
+        <span class="" style="color:#6f70eb">.showcase( <p style="color:orange; display:inline;">"life"</p> , <p style="color:orange; display:inline;"> "CV"</p> )</span>
+
+    </div>
+    <canvas class="webgl"></canvas>
+    <svg viewbox="0 0 500 500" class="svg1">
+        <path id="our-text"  d="M33.5 39.5v429h437v-429h-431" fill="transparent"> </path>
+        <text y="40" font-size="20" font-family="Montserrant, Arial" >
+
+            <textPath id="text-path" class="text" href="#our-text" startOffset="400" style="  fill: #6f70eb;  stroke: #6f70eb;     text-transform: uppercase;" >
+                
+            </textPath>
+        </text>
+    </svg>
+
+    <div class="textContenitor" id="textContenitor">
+        <div>
+            <div class="spine" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+            <div class="spine-target">
+                <div class="circle" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0); background-color: rgb(89, 24, 223);    position: fixed;
+                right: 5.67%;"></div>
+                <div class="pulse" style="opacity: 1;"></div>
+            </div>
+        </div>
+
+        <div class="alien">
+            <svg xmlns="http://www.w3.org/2000/svg" id="et" viewBox="0 0 100 200" aria-labelledby="etDesc" style="visibility: inherit; opacity: 1; transform: translate(125.953%, 26.892%) translate3d(0px, 0px, 0px);"><desc id="etDesc">A little green alien, flying around in its purple spaceship</desc><linearGradient id="etLight" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#f00" stop-opacity=".75"></stop><stop offset="100%" stop-color="#f00" stop-opacity="0"></stop></linearGradient><linearGradient id="etLight2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0ff" stop-opacity=".75"></stop><stop offset="100%" stop-color="#0ff" stop-opacity="0"></stop></linearGradient><g class="et-et" style="transform-origin: 0px 0px 0px;" data-svg-origin="50 17.365648651123045" transform="matrix(0.99956,-0.02962,0.02962,0.99956,-4.625491389309076,2.7468191779328652)"><g class="et-light"><path fill="url(#etLight2)" d="M50 12.5L0 191.6h100L50 12.5z"></path></g><g class="et-ship" style="transform-origin: 0px 0px 0px;" data-svg-origin="50.29999923706055 22.2240571975708" transform="matrix(0.99925,0.03859,-0.03859,0.99925,0.8951973891277589,-1.9247356487742806)"><path fill="#5f1b9a" d="M60.7 20.2c.1-2.4-5-5.2-10.4-5.3s-10.7 2-10.8 4.5c0 1.4 1.5 3.2 3.9 4.5l-.1 2.5c0 .1.1.3.3.3H45c.1 0 .3-.1.3-.3l.1-1.7c1.4.5 2.9.9 4.5.9 1.7.1 3.4-.2 4.9-.7l-.1 1.7c0 .1.1.3.3.3h1.4c.1 0 .3-.1.3-.3l.1-2.5c2.3-1 3.9-2.5 3.9-3.9z"></path><ellipse cx="50.3" cy="17.2" fill="#a95ed4" rx="11.8" ry="6.8"></ellipse><g class="et-body"><path fill="#00b1e5" d="M50.2 19.7c1.6.1 3.1-.2 4.3-.8 0-.1 0-.2.1-.4l.2-5.9c.1-2.3-1.8-4.3-4.2-4.4-2.4-.1-4.4 1.8-4.5 4.1l-.2 5.9v.5c1.2.8 2.7 1 4.3 1z"></path><g class="et-eye" style="transform-origin: 0px 0px 0px;" data-svg-origin="50.400001525878906 13.300000190734863" transform="matrix(1,0,0,1,0,0)"><ellipse cx="50.4" cy="13.3" fill="#fff" rx="2.5" ry="2.5"></ellipse><ellipse cx="50.4" cy="13.3" fill="#004e88" rx="1" ry="1"></ellipse></g></g></g></g></svg>
+        </div>
+
+
+        <div class="anim myImage">
+
+        </div>
+        <!--Coffe-->
+        <div class="loader">
+
+            <div class="drops">
+                <div class="drop1"></div>
+                <div class="drop2"></div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="liquid">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="liquid" />
+      </filter>
+    </defs>
+  </svg>
+
+
+        <div class="coffeDIV">
+            <svg xmlns="http://www.w3.org/2000/svg" id="coffee" viewBox="0 0 20 20" style="visibility: inherit; opacity: 1; "><g class="coffee-coffee" style="transform-origin: 0px 0px 0px;" data-svg-origin="9.978446006774902 9.95466423034668" ><path fill="#a95ed4" d="M17.8 5.5c-.5-.3-1.1-.3-1.6-.1v-.2c-.1-.6-.2-2.6-8-1.4S.9 7 1 7.7c.4 2.7 2.4 5.7 5.2 6.9 0 .2 0 .3.1.5.2 1.1 1.9 1.6 3.9 1.3 2-.3 3.4-1.3 3.2-2.4 0-.2-.1-.4-.1-.5.7-.6 1.3-1.4 1.7-2.2.2.1.4.3.6.4.3.2.7.2 1 .2.8-.1 1.6-.9 2.1-2.1.6-2 .3-3.7-.9-4.3zm-.1 3.7c-.4 1.1-1.2 1.7-1.8 1.4-.2-.1-.3-.2-.4-.3.5-1.2.8-2.4.8-3.6.2-.1.4-.2.5-.2.2 0 .4 0 .5.1.7.3.8 1.4.4 2.6z" class="coffee-cup"></path><path fill="#501e20" d="M8.4 4.9C5 5.4 2.4 6.4 2.5 7c.1.7 2.9.8 6.2.3 3.3-.5 6-1.5 5.9-2.2s-2.9-.7-6.2-.2z" class="coffee-liquid"></path></g></svg>
+
+        </div>
+        <!--Coffe-->
+        <div class="aboutme anim">
+            <h1 class="abouth1" style="padding:0;">
+                .about
+            </h1>
+            <h1 class="meh1" style="padding:0;">
+                Me(
+                <p style="color:#6f70eb; display:inline;font-size: .5em;">2002 , 2021</p>)
+            </h1>
+        </div>
+        <div class="presentazione">
+            <div class="bodytext left anim">
+                <p class="commented">/* Initial presentation. */</p>
+                <p>
+                    Hi, I'm Andrea Barutta, a nice 19 year old from Padua, Italy. I am passionate and student of computer science and software development. In my free time I am an agonist volleyball player and I spend time with my beloved dog, an Australian Shepherd named
+                    'Noce'.
+                </p>
+            </div>
+            <div class="bodytext right anim">
+                <p class="commented">/* Past experiences, diploma ,passions and some motivational phrases. */</p>
+                <p>
+                    I recently graduated from the Primo Levi technical institute in Mirano, Venice, at the address of computer science with a score of 100/100 &#127891. I missed the praise because I had 59 credits out of 60.Here I discovered my great passion for software
+                    development in particular for web development. What I like most is that starting from scratch, I can create whatever I have in mind, by searching, by experimenting and imagining. </p>
+            </div>
+            <div class="bodytext left anim">
+                <p class="commented">/* Future projects. */</p>
+                <p>
+                    Now I am starting my university career at the faculty of computer science in Padua. Although I am passionate about the development of the backend, I also enjoy researching new ways of designing the frontend and in my free time I also dedicate myself to
+                    the study of new techniques and technologies for design.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="skillLevel">
+
+
+
+            <div class="titleSKILLS">
+
+
+
+                <h1 class="meh1">me</h1>
+                <h1 class="abouth1">.getSkills(
+                    <p style="color:orange; display:inline;">'webDevelopment'</p> )</h1>
+
+            </div>
+
+            <table class="tableWEB">
+                <tr>
+                    <td>
+                    </td>
+                    <td class="tdSubject">
+                        <div class="stickLB">
+                        </div>
+                        <div class="tdContentB">BEGINNER</div>
+                        <div class="stickRB">
+                        </div>
+                    </td>
+                    <td class="tdSubject">
+                        <div class="stickLB">
+                        </div>
+                        <div class="tdContentB">ELEMENTARY</div>
+                        <div class="stickRB">
+                        </div>
+                    </td>
+                    <td class="tdSubject">
+                        <div class="stickLB">
+                        </div>
+                        <div class="tdContentB">INTERMEDIATE</div>
+                        <div class="stickRB">
+                        </div>
+                    </td>
+                    <td class="tdSubject">
+                        <div class="stickLB">
+                        </div>
+                        <div class="tdContentB">ADVANCED</div>
+                        <div class="stickRB">
+                        </div>
+                    </td>
+                    <td class="tdSubject">
+                        <div class="stickLB">
+                        </div>
+                        <div class="tdContentB">EXPERT</div>
+                        <div class="stickRB">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdSubject">
+                        <div class="stickL">
+
+                        </div>
+                        <div class="tdContent">HTML</div>
+                        <div class="stickR">
+
+                        </div>
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.1s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.3s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.5s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.7s;">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim " style="animation-delay: 0.9s; ">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdSubject">
+                        <div class="stickL">
+
+                        </div>
+                        <div class="tdContent">CSS</div>
+                        <div class="stickR">
+
+                        </div>
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.1s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.3s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.5s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.7s; ">
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdSubject">
+                        <div class="stickL">
+
+                        </div>
+                        <div class="tdContent">JAVASCRIPT</div>
+                        <div class="stickR">
+
+                        </div>
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.1s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.3s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.5s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.7s; ">
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdSubject">
+                        <div class="stickL">
+
+                        </div>
+                        <div class="tdContent">PHP</div>
+                        <div class="stickR">
+
+                        </div>
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.1s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.3s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.5s; ">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom anim" style="animation-delay: 0.7s; ">
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdSubject">
+                        <div class="stickL">
+
+                        </div>
+                        <div class="tdContent">JS LIBRARY</div>
+                        <div class="stickR">
+
+                        </div>
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom">
+                    </td>
+                    <td>
+                        <img src="../static/images/atom.PNG" class="atom">
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!--SECOND-->
+        <div class="skillLevel anim" style="    width: 100%;">
+            <div class="titleSKILLS">
+
+
+                <h1 class="meh1">me</h1>
+                <h1 class="abouth1">.getSkills(
+                    <p style="color:orange; display:inline;">'General'</p> )</h1>
+
+            </div>
+            <div class="contenitorPhotoSkills">
+                <div class="divPhotoGrad">
+
+                </div>
+                <div class="mainSkills">
+
+                    <p class="commented" style="display: inline;">/* These are some of my skills that I have developed in my 19 years of life. */</p>
+                    <div style="display: flex; flex-direction: row;">
+                        <h4 style="color:#6f70eb; font-weight: bold; display: inline;"> MainSkills</h4>
+                        <h4 style="color:#fff; font-weight: bold; display: inline;">.get(
+                            <p style="color:orange; display:inline;">'development'</p> )</h4>
+                    </div>
+                    <div class="mainSkills1">
+                        <div class="FDskill">
+                            <div>
+                                <p>Frontend development</p>
+                            </div>
+                            <div>
+                                <p>JavaScript, CSS, HTML, Datatable,<br> jQuery, GSAP , Bootstrap, Threejs, React</p>
+                            </div>
+
+                            <div>Paint 3D, Jitter, Vectary <br> Figma</div>
+                            <div>Use of media modeling tools and CMS</div>
+                        </div>
+                        <div class="FDskill">
+                            <div>
+                                <p>Backend development </p>
+                                <p style='font-size:1.5em;'>&#128281 &#128282</p>
+                            </div>
+                            <div>
+                                <p>php, nodejs, ajax, mysql,<br> sql</p>
+                            </div>
+                            <div>Heidi SQL, phpMyAdmin </div>
+                            <div>Use of DBMS and ability to web interacting with DB</div>
+                        </div>
+                        <div class="FDskill">
+                            <div>
+                                <p>Programming
+                                    <p style='font-size:1.5em;'>&#9749</p>
+                                </p>
+                            </div>
+                            <div>
+                                <p>c++, java, js, sql, <br> php, nodejs, python
+                                </p>
+                            </div>
+                            <div>Android Studio, VScode,<br>f Notepad++</div>
+                            <div>Ability to easily learn different programming languages ​​and to use them according to their characteristics</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <h4 style="color:#6f70eb; font-weight: bold; display: inline;"> MainSkills</h4>
+                        <h4 style="color:#fff; font-weight: bold; display: inline;">.get(
+                            <p style="color:orange; display:inline;">'Others'</p> )</h4>
+                    </div>
+                    <div class="mainSkills1">
+                        <div class="FDskill">
+                            <div>
+                                <p>Cisco Certifications &#127760<br>
+                                    <p style="color: green; font-weight: bold;">/* systems and networks,<br> general internet protocols &#127380 */</p>
+                                </p>
+                            </div>
+                            <div>
+                                Linux Essentials
+                            </div>
+
+                            <div>
+                                Introduction to network <br>CCNA v7
+                            </div>
+                            <div>Certifications acquired following the cisco courses during the school course</div>
+                        </div>
+                        <div class="FDskill">
+                            <div>
+                                <p>English Lenguage</p>
+                            </div>
+                            <div>
+                                <img src="../static/images/ingLet (1).PNG" alt="">
+                            </div>
+
+                            <div>
+                                <img src="../static/images/IngAsc.PNG" alt="">
+                            </div>
+                            <div>Certifications acquired by the Italian Ministry of Education following the invalsi tests of the fifth superior</div>
+                        </div>
+                        <div class="FDskill">
+                            <div>
+                                <p>Math</p>
+                            </div>
+                            <div>
+                                <img src="../static/images/Mat.PNG" alt="">
+                            </div>
+
+                            <div>
+
+                            </div>
+                            <div>Certification acquired by the Italian Ministry of Education following the invalsi tests of the fifth superior</div>
+                        </div>
+
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <h4 style="color:#6f70eb; font-weight: bold; display: inline;"> me</h4>
+                        <h4 style="color:#fff; font-weight: bold; display: inline;">.get(
+                            <p style="color:orange; display:inline;">'passions'</p> )</h4>
+                    </div>
+                    <div class="mainSkills1">
+                        <div class="FDskill">
+                            <div>
+                                <p>Dogs &#128054<br>
+                                    <p style="color: green; font-weight: bold;">/* I live with a <br>border collie, &#128062<br> a maltese and an aussie. */</p>
+                                </p>
+                            </div>
+                            <div>
+                                Acquascaping
+                                <p class="commented">// recreate natural <br> // landscapes underwater <br> // &#127802</p>
+                            </div>
+
+                            <div>
+                                volleyball
+                                <p class="commented">//I win 4 Italian <br> // championship &#127952</p>
+                            </div>
+                            <div>Tech and automation &#127969
+                                <p class="commented">// I have created several <br> // devices for home automation <br> // and monitoring with <br> // Arduino WIFI (ESP2866) */</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="titleSKILLS" style="text-align: left;">
+
+            <h1 class="abouth1" style="padding:0">.my</h1>
+            <h1 class="meh1" style="padding:0;padding-bottom: 15px;"> Projects()</h1>
+
+        </div>
+        <div class="ballCONT">
+            <div width="100%" style="position: relative;">
+                <div class="howball1"></div>
+                <div class="howball2"></div>
+            </div>
+            <div class="howProject">
+                <div>
+                    <img src="../static/images/how.PNG" width="400px" alt="" class="howIMG">
+                </div>
+
+                <div class="svg2cont">
+                    <svg width="211" height="71" viewBox="0 0 211 71" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg2">
+                <path class="prog_anim" d="M53.375 70H44.3281V38.4531H9.92188V70H0.921875V1.75H9.92188V31.0938H44.3281V1.75H53.375V70Z" stroke="white" stroke-width="2"/>
+                <path class="prog_anim" d="M121.859 38.0781C121.859 44.7656 120.734 50.6094 118.484 55.6094C116.234 60.5781 113.047 64.375 108.922 67C104.797 69.625 99.9844 70.9375 94.4844 70.9375C89.1094 70.9375 84.3438 69.625 80.1875 67C76.0312 64.3438 72.7969 60.5781 70.4844 55.7031C68.2031 50.7969 67.0312 45.125 66.9688 38.6875V33.7656C66.9688 27.2031 68.1094 21.4062 70.3906 16.375C72.6719 11.3438 75.8906 7.5 80.0469 4.84375C84.2344 2.15625 89.0156 0.8125 94.3906 0.8125C99.8594 0.8125 104.672 2.14062 108.828 4.79688C113.016 7.42188 116.234 11.25 118.484 16.2812C120.734 21.2812 121.859 27.1094 121.859 33.7656V38.0781ZM112.906 33.6719C112.906 25.5781 111.281 19.375 108.031 15.0625C104.781 10.7188 100.234 8.54688 94.3906 8.54688C88.7031 8.54688 84.2188 10.7188 80.9375 15.0625C77.6875 19.375 76.0156 25.375 75.9219 33.0625V38.0781C75.9219 45.9219 77.5625 52.0938 80.8438 56.5938C84.1562 61.0625 88.7031 63.2969 94.4844 63.2969C100.297 63.2969 104.797 61.1875 107.984 56.9688C111.172 52.7188 112.812 46.6406 112.906 38.7344V33.6719Z" stroke="white" stroke-width="2"/>
+                <path  class="prog_anim" d="M150.078 48.4844L151.391 57.4844L153.312 49.375L166.812 1.75H174.406L187.578 49.375L189.453 57.625L190.906 48.4375L201.5 1.75H210.547L194 70H185.797L171.734 20.2656L170.656 15.0625L169.578 20.2656L155 70H146.797L130.297 1.75H139.297L150.078 48.4844Z" stroke="white" stroke-width="2"/>
+                </svg>
+                    <div style=" padding: 10px;">A web application where you can check, manage and save your expenses and income quickly and effortlessly.</div>
+                    <div class="elemeTCont">
+                        <div class="elemT">html</div>
+                        <div class="elemT">css</div>
+                        <div class="elemT">javascript</div>
+                        <div class="elemT">php</div>
+                        <div class="elemT">mysql</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="scrollAnimationDIV">
+
+
+            <div class="SMcircle">
+
+            </div>
+
+            <div id="elem" class="word1">SCROLL</div>
+            <div id="elem" class="word2">DOWN</div>
+            <span id="elem" class="word3">SLOWLY</span>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="divAstronaut" id="divAstronaut">
+        <div class="contAs_Elem_animation">
+            <div class="contenitorElemAs" id="contenitorElemAs">
+                <div class="blackground">
+
+                    <div class="quadrato qblue q1" style="left:10%">
+                        <div class="leng">C++</div>
+                    </div>
+                    <div class="quadrato qblue q2" style="left:30%">
+                        <div class="leng js">Js</div>
+                    </div>
+                    <div class="quadrato qblue q3" style="left:70%">
+                        <div class="leng python">Py</div>
+                    </div>
+                    <div class="quadrato qblue q4" style="left:85%">
+                        <div class="leng css"> css</div>
+                    </div>
+
+                    <div class="quadrato qred q5" style="left:15%">
+                        <div class="leng java">Java</div>
+                    </div>
+                    <div class="quadrato qred q6" style="left:35%">
+                        <div class="leng html">html</div>
+                    </div>
+                    <div class="quadrato qred q7" style="left:65%">
+                        <div class="leng nodejs">node</div>
+                    </div>
+                    <div class="quadrato qred q8" style="left:90%">
+                        <div class="leng html">three</div>
+                    </div>
+
+                    <div class="quadrato qyello q9" style="left:5%">
+                        <div class="leng php">php</div>
+                    </div>
+                    <div class="quadrato qyello q10" style="left:25%">
+                        <div class="leng mysql">mysql</div>
+                    </div>
+                    <div class="quadrato qyello q11" style="left:55%">
+                        <div class="leng html">c#</div>
+                    </div>
+                    <div class="quadrato qyello q12" style="left:80%">
+                        <div class="leng html">GSAP</div>
+                    </div>
+
+                    <div class="secondPartAnimation">
+                        <div class="cube">
+                            <div class="cube__face cube__face--front">I</div>
+                            <div class="cube__face cube__face--back">am</div>
+                            <div class="cube__face cube__face--right">am</div>
+                            <div class="cube__face cube__face--left">code</div>
+                            <div class="cube__face cube__face--top"><img src="../static/images/loved.WEBP" class="loveIMG" alt=""></div>
+                            <div class="cube__face cube__face--bottom">code</div>
+                        </div>
+
+                    </div>
+
+                    <div class="macWin">
+                        <div class="extBlack">
+                            <div class="But redBut">
+
+                            </div>
+                            <div class="But yelloBut"></div>
+                            <div class="But greenBut"></div>
+                            <div class="intsftBlack">
+                                <div class="contactme" id="contactmeID" style=" display:none;color: green">Andrea Barutta, Padova IT [Versione 04/03/2002]
+                                    <BR> > world.getDevelopers().getByName(
+                                    <p style='font-weight:bold;display:contents; '>'Andrea Barutta'</p>).getContact() <br>
+                                    <BR>> PRESS ENTER:<br></div>
+                                <div class="coderow Lwhite" style="display: inline;"></div>
+                                <div class="coderow Lgreen" style="display: inline;"></div>
+                                <div class="break"></div>
+                                <div class="coderow Lred" style="left: 10%; display: block;"></div>
+                                <div class="break"></div>
+                                <div class="coderow Lblue" style="display: inline; left: 15%;"></div>
+                                <div class="coderow Lyello" style="display: inline; left: 15%;"></div>
+                                <div class="break"></div>
+                                <div class="coderow Lred2" style="display: inline; left: 15%;"></div>
+                                <div class="coderow Lblue2" style="display: inline; left: 15%;"></div>
+                                <div class="break"></div>
+                                <div class="coderow Lyello2" style="display: inline; left: 15%;"></div>
+                                <div class="coderow Lgreen2" style="display: inline; left: 15%;"></div>
+                                <div class="break"></div>
+                                <div class="coderow Lblue" style="display: inline; left: 15%; width: 17%;"></div>
+                                <div class="break"></div>
+                                <div class="coderow Lblue" style="display: inline; left: 20%; width: 25%; background: purple;"></div>
+                                <div class="break"></div>
+                                <div class="coderow Lblue" style="display: inline; left: 20%; width: 35%; background: tomato;"></div>
+                                <div class="break"></div>
+                                <div class="coderow Lwhite" style="left: 10%; display: block; width: 40%;"></div>
+                                <div class="break"></div>
+                                <div class="coderow Lgreen" style=" display: block; width: 150px;"></div>
+
+                                <div class='compileBut'>
+                                    <div class="circle"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <img src="../static/images/PinClipart.com_hand-clipart-png_387526.PNG" class="cursorsTopo" alt="">
+                    </div>
+                    <div class="tweetDIV" id="tweetDIV">
+                        <video autoplay="autoplay" class="tweet" id="tweet" muted="true">
+                            <source src="../static/videos/tweet.MP4" type="video/mp4" id="tweet" onended='console.log("jdajdkakj")'>
+                           
+                            Your browser does not support the video tag.
+                          </video>
+                    </div>
+                    <div class="photos" id="photos">
+                        <img src="../static/images/photo1.JPG" alt="">
+                        <img src="../static/images/photo2.JPG" alt="">
+                        <img src="../static/images/photo3.JPG" alt="">
+                        <img src="../static/images/photo4.JPG" alt="">
+                        <img src="../static/images/photo5.JPG" alt="">
+                    </div>
+
+
+                    <div class="sottotitoli" id="sottotitoli"></div>
+
+                    <div class="memoryContenitor">
+                        <div class="card notDone" id="card_0"></div>
+                        <div class="card notDone" id="card_1"></div>
+                        <div class="card notDone" id="card_2"></div>
+                        <div class="card notDone" id="card_3"></div>
+
+                        <div class="break"></div>
+
+                        <div class="card notDone" id="card_4"></div>
+                        <div class="card notDone" id="card_5"></div>
+                        <div class="card notDone" id="card_6"></div>
+                        <div class="card notDone" id="card_7"></div>
+                    </div>
+                </div>
+                <div class="googleSearch">
+                    <div style="text-align:center; height: 100vh;" class="googleCont">
+
+                        <header>
+
+                            <ul>
+                                <li><a class="links" href="#user"><button class="signbutton" type="button">Sign in</button></a></li>
+                                <li>
+                                    <a href="#grid"><img class="grid" src="https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-11-512.png" title="Google apps"></a>
+                                </li>
+                                <li><a href="#images">Images</a></li>
+                                <li><a href="#gmail">Gmail</a></li>
+                            </ul>
+                        </header>
+                        <div class="logo" id="logoG">
+                            <img alt="Google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+                        </div>
+                        <div class="bar" id="bar">
+                            <span class="searchbar" title="Search"></span>
+                            <a href="#"> <img class="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png" title="Search by Voice"></a>
+                        </div>
+                        <div class="buttons">
+                            <button class="button" type="button">Google Search</button>
+                            <button class="button" type="button">I'm Feeling Lucky</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="finalImage">
+                    <div class="finalInfo">
+                        <div class="finalName" style="padding :10px">
+                            <h1 class="meh1" style="display: inline;">AndreaBarutta </h1>
+                            <h1 class="abouth1" style="display: inline;">.getEmail()</h1>
+                            <h1 class="meh1" style="display: inline;">; </h1>
+                        </div>
+                        <div class="finalemail" style="padding :10px">
+                            <p style="display: inline; color: #fff; padding: 5px ;">return</p>
+                            <p style="color:orange; display:inline;">"andreabarutta123@gmail.com"</p>
+                            <p style="display: inline; color: #fff; padding: 5px ;">;</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <img src="../static/images/astronaut.JPG " class="astronaut " alt=" ">
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/BezierPlugin.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js " integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js " integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollToPlugin.min.js " integrity="sha512-KiolqpWCqWnEVhaeyUO5fbPZNex0MObnoZCvDnlsFNAMeBIR+f9MIazKYKge77c8EXv1H/rHqADKJZUUhhB1ng==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/EasePack.min.js"></script>
+
+
+
+
+
+
+    <script type="module" src="script.js "></script>
+
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js "></script>-->
+</body>
+
+</html>
