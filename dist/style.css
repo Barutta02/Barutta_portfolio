@@ -579,7 +579,7 @@ body {
     transform-style: preserve-3d;
     transition: transform 1s;
     transform: translateZ(-100px) rotateY( 0deg);
-    background: transparent;
+    background: #121212;
 }
 
 .cube__face {
@@ -862,18 +862,18 @@ label {
 .howball1 {
     width: 150px;
     height: 150px;
-    background: #FFAFBD;
+    background: #fffbd5;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);
+    background: -webkit-linear-gradient(to right, #b20a2c, #fffbd5);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffc3a0, #FFAFBD);
+    background: linear-gradient(to right, #b20a2c, #fffbd5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 50%;
     float: right;
     transform: translate(50%, -20%);
     position: absolute;
     right: 0;
-    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
 }
 
 .howball2 {
@@ -923,6 +923,131 @@ label {
     position: absolute;
     bottom: 88%;
     right: 90%;
+}
+
+
+/*PHOTOS GALLERY VOLLEY*/
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#lamp {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+input[name="switch"],
+input[name="switch"]+label {
+    position: absolute;
+    bottom: 3rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+input[name="switch"]+label {
+    right: 3rem;
+}
+
+input[name="switch"] {
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+}
+
+input[value="on"] {
+    right: 3rem;
+}
+
+input[value="off"] {
+    right: -4rem;
+}
+
+input[name="switch"]+label {
+    text-align: center;
+}
+
+[class*="entypo-"]:before {
+    line-height: 4rem;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'entypo', sans-serif;
+}
+
+input[value="on"]:checked {
+    right: -4rem;
+}
+
+input[value="on"]:checked+input[value="off"] {
+    right: 3rem;
+}
+
+.lamp {
+    position: relative;
+    margin: 0 auto;
+    width: .7rem;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-repeat: no-repeat;
+    background-size: .15rem 8rem, .4rem .8rem, .7rem 2rem;
+    background-position: 50% 0, .19rem 8rem, 0 8.8rem;
+}
+
+.lamp:before,
+.lamp:after {
+    content: '';
+    position: absolute;
+}
+
+.lamp:before {
+    left: -1.65rem;
+    bottom: -4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: inset 2px -2px 10px rgba(255, 255, 255, 0.07);
+    transition: all .15s;
+}
+
+.gonna-give-light,
+.gonna-give-light:before {
+    position: absolute;
+}
+
+.gonna-give-light {
+    top: 10.05rem;
+    left: .25rem;
+    width: 0;
+    height: 1.5rem;
+    border-right: .2rem solid rgba(255, 255, 255, 0.05);
+}
+
+.gonna-give-light:before {
+    content: '';
+    top: 1.5rem;
+    left: -.35rem;
+    width: .9rem;
+    height: .9rem;
+    border-radius: 50%;
+    border: .2rem solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0);
+}
+
+input[value="on"]:checked~.lamp:before {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.8), 0px 5px 50px rgba(255, 255, 255, 0.8), 0px 8px 80px rgba(255, 255, 255, 0.6), 0px 8px 120px rgba(255, 255, 255, 0.6);
 }
 
 .photos {
@@ -1113,6 +1238,7 @@ li a:hover {
     top: 0;
     left: 0;
     background-position-x: right;
+    background-size: contain;
     opacity: 0;
 }
 
@@ -1121,6 +1247,51 @@ li a:hover {
     width: 50%;
     top: 30%;
     left: 5%;
+}
+
+
+/*GOODBYE ANIMATION*/
+
+.goodbyeDIV path {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: .5;
+}
+
+.GBsvg path:nth-child(2) {
+    stroke-dasharray: 328.4253845214844;
+    stroke-dashoffset: 328.4253845214844;
+    transform-origin: left;
+}
+
+.GBsvg path:nth-child(3) {
+    stroke-dasharray: 381.78668212890625;
+    stroke-dashoffset: 381.78668212890625;
+    transform-origin: left;
+}
+
+.GBsvg path:nth-child(4) {
+    stroke-dasharray: 335.4042663574219;
+    stroke-dashoffset: 335.4042663574219;
+    transform-origin: left;
+}
+
+.GBsvg path:nth-child(5) {
+    stroke-dasharray: 337.8004150390625;
+    stroke-dashoffset: 337.8004150390625;
+    transform-origin: left;
+}
+
+.GBsvg path:nth-child(6) {
+    stroke-dasharray: 282.3616943359375;
+    stroke-dashoffset: 282.3616943359375;
+    transform-origin: left;
+}
+
+.GBsvg path:nth-child(7) {
+    stroke-dasharray: 191.58421325683594;
+    stroke-dashoffset: 191.58421325683594;
+    transform-origin: left;
 }
 
 
@@ -1220,6 +1391,15 @@ li a:hover {
         background-size: 250px 150px;
     }
 }
+
+
+/*
+@keyframes writegoodbye {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+*/
 
 .loader {
     width: 250px;

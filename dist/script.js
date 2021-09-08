@@ -429,6 +429,18 @@ tween.to('.word1', 1, {
         display: 'flex',
         ease: Power1.easeInOut,
     }, 13)
+    .to('#lamp', 1, {
+        top: '0px',
+        ease: Power1.easeInOut,
+        onComplete: function() {
+            $(".radioOn").prop('checked', true);
+            $(".radioOff").prop('checked', false);
+        },
+        onReverseComplete: function() {
+            $(".radioOn").prop('checked', false);
+            $(".radioOff").prop('checked', true);
+        }
+    }, 13)
     .to('.tweetDIV', 2, {
         opacity: 0,
         ease: Power1.easeInOut,
@@ -458,6 +470,10 @@ tween.to('.word1', 1, {
         onReverseComplete: function() {
             $("#sottotitoli").text("I have always played volleyball in important clubs in northern Italy.")
         }
+    }, 18)
+    .to('#lamp', 1, {
+        top: '-100%',
+        ease: Power1.easeInOut,
     }, 18)
     .to('.photos', 1, {
         opacity: 0,
@@ -517,6 +533,7 @@ tween.to('.word1', 1, {
         ease: Power1.easeInOut,
         onComplete: function() {
             $("#sottotitoli").text("Today I continue to study whatever can be useful to my passion for programming and <br> when I can I try to add a little creativity and good taste to my ideas.")
+
         },
         onReverseComplete: function() {
             $("#sottotitoli").text("So I decided to dedicate some of the time I dedicated to sport to the study of computer programming and web developing.")
@@ -525,13 +542,19 @@ tween.to('.word1', 1, {
     }, 26.5)
     .to('.blackground', 1.5, {
         background: "#121113",
-        ease: Power1.easeInOut,
+        ease: Power1.easeInOut
     }, 26)
     .to('.finalImage', 1, {
         opacity: 1,
-        ease: Power1.easeInOut
-    }, 27.5)
+        ease: Power1.easeInOut,
 
+    }, 27.5)
+    .to('.goodbyeDIV path', 1, {
+        strokeDashoffset: 0,
+        opacity: 1,
+        ease: Power1.easeInOut
+
+    }, 28)
 
 
 
@@ -756,4 +779,10 @@ function controlWin() {
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
+}
+
+for (var i = 0; i < document.querySelectorAll(".goodbyeDIV path").length; i++) {
+    console.log("jjsja")
+    console.log(document.querySelectorAll(".goodbyeDIV path")[i].getTotalLength())
+
 }
