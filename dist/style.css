@@ -844,8 +844,7 @@ label {
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18);
     padding: 20px;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
     z-index: 6;
 }
 
@@ -862,11 +861,8 @@ label {
 .howball1 {
     width: 150px;
     height: 150px;
-    background: #fffbd5;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #b20a2c, #fffbd5);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #b20a2c, #fffbd5);
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 50%;
