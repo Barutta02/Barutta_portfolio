@@ -93,10 +93,10 @@ function init() {
     sphere = new THREE.Mesh(
         new THREE.SphereGeometry(0.5, 64, 64),
         new THREE.MeshBasicMaterial({
-            map: new THREE.TextureLoader().load('../static/texture/worldBest.jpg'),
-            bumpMap: new THREE.TextureLoader().load('../static/texture/elev_bump_4k.jpg'),
+            map: new THREE.TextureLoader().load('static/texture/worldBest.jpg'),
+            bumpMap: new THREE.TextureLoader().load('static/texture/elev_bump_4k.jpg'),
             bumpScale: 0.005,
-            specularMap: new THREE.TextureLoader().load('../static/texture/water_4k.png'),
+            specularMap: new THREE.TextureLoader().load('static/texture/water_4k.png'),
             specular: new THREE.Color('grey')
         })
     )
@@ -105,20 +105,20 @@ function init() {
     cloud = new THREE.Mesh(
         new THREE.SphereGeometry(0.503, 32, 32),
         new THREE.MeshBasicMaterial({
-            map: new THREE.TextureLoader().load('../static/texture/fair_clouds_4k.png'),
+            map: new THREE.TextureLoader().load('static/texture/fair_clouds_4k.png'),
             transparent: true
         })
     );
     moon = new THREE.Mesh(
         new THREE.SphereGeometry(0.1, 32, 32),
         new THREE.MeshBasicMaterial({
-            map: new THREE.TextureLoader().load('../static/texture/moon.jfif'),
+            map: new THREE.TextureLoader().load('static/texture/moon.jfif'),
         })
     );
     galaxy = new THREE.Mesh(
         new THREE.SphereGeometry(90, 64, 64),
         new THREE.MeshBasicMaterial({
-            map: new THREE.TextureLoader().load('../static/texture/galaxy_starfield.png'),
+            map: new THREE.TextureLoader().load('static/texture/galaxy_starfield.png'),
             side: THREE.BackSide
         })
     );
