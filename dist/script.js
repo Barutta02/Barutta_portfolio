@@ -172,7 +172,6 @@ window.addEventListener('resize', () => {
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-
 })
 
 /**
@@ -220,6 +219,10 @@ const tick = () => {
 let isThereGalaxy = true;
 
 function updateCamera(ev) {
+    $(".imageRotate").css("opacity", $(".imageRotate").css("opacity") - 0.05)
+    if (window.scrollY == 0) {
+        $(".imageRotate").css("opacity", 1)
+    }
     if (sphere.rotation.y <= 4.5127998046875 || camera.position.z < 2 - (window.scrollY / 4000.0)) {
         //X
         sphere.rotation.x = (window.scrollY) / 5750;
@@ -410,7 +413,7 @@ tween.to('.word1', 1, {
         onReverseComplete: function() {
             changeDisplay(".coderow", "block")
             waitForEnter = true;
-            //document.getElementsByClassName("macWin")[0].style.zIndex = 0;
+            // document.getElementsByClassName("macWin")[0].style.zIndex = 0;
             macWinContactID.innerHTML = "Andrea Barutta, Padova IT [Versione 04/03/2002]<BR> > world.getDevelopers().getByName(<p style='font-weight:bold;display:contents; '>'Andrea Barutta'</p>).getContact() <br>            <BR>> PRESS ENTER:<br> ";
         }
     }, 9)

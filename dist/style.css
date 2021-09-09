@@ -56,10 +56,18 @@ body {
     opacity: 1;
     z-index: 6;
     display: flex;
+    width: 100%;
 }
 
 .myName p {
     display: inline;
+}
+
+.myName img {
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-100%);
 }
 
 .svg1 {
