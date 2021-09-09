@@ -674,6 +674,7 @@ label {
     position: relative;
     width: 40%;
     left: 70%;
+    z-index: 20;
 }
 
 .extBlack {
@@ -786,11 +787,11 @@ label {
 /*VIDEO-------------*/
 
 .tweetDIV {
-    width: 50%;
+    width: 35%;
     height: 50%;
     display: none;
     position: absolute;
-    left: 25%;
+    left: 32.5%;
     top: 25%;
 }
 

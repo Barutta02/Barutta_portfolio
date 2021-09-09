@@ -409,8 +409,8 @@ tween.to('.word1', 1, {
         },
         onReverseComplete: function() {
             changeDisplay(".coderow", "block")
-            waitForEnter = false;
-            document.getElementsByClassName("macWin")[0].style.zIndex = 0;
+            waitForEnter = true;
+            //document.getElementsByClassName("macWin")[0].style.zIndex = 0;
             macWinContactID.innerHTML = "Andrea Barutta, Padova IT [Versione 04/03/2002]<BR> > world.getDevelopers().getByName(<p style='font-weight:bold;display:contents; '>'Andrea Barutta'</p>).getContact() <br>            <BR>> PRESS ENTER:<br> ";
         }
     }, 9)
@@ -617,11 +617,26 @@ const scene2 = new ScrollMagic.Scene({
 //WAIT FOR ENTER KEY
 
 // Get the input field
-var input = document.getElementById("body");
+var bodyElem = document.getElementById("body");
+var input = bodyElem;
+
+document.getElementById("macWin").onclick = function() {
+
+    launchCMD();
+}
 
 input.addEventListener("keyup", function(event) {
 
-    if (event.keyCode === 13 && waitForEnter) {
+    if (event.keyCode === 13) {
+
+        launchCMD();
+
+    }
+});
+
+function launchCMD() {
+    console.log(waitForEnter)
+    if (waitForEnter) {
         waitForEnter = false;
         setTimeout(function() {
             macWinContactID.innerHTML += "> .. <br>"
@@ -634,17 +649,10 @@ input.addEventListener("keyup", function(event) {
         }, 3000);
         setTimeout(function() {
             typeWriter()
-                // macWinContactID.innerHTML += "> Hello wor#[%&<br> <p style='color:red; display:contents;'>> Exception in thread 'main' ArrayIndexOutOfBounds </p><br>  "
+
         }, 4000);
-        /* setTimeout(function() {
-             //contactInput();
-             typeWriter()
-         }, 4300);*/
-
-
     }
-});
-
+}
 
 
 
@@ -709,13 +717,13 @@ function initializecard() {
                 index = getRandomInt(8);
             }
             memory[index] = element;
-            console.log(memory[index])
+
         }
     });
 }
 
 initializecard()
-console.log(memory)
+
 var cardTurned = 0;
 var cardTurn = [0, 0],
     cardFound = 0,
@@ -728,7 +736,6 @@ $(".card").click(function() {
             "transform": "rotateY(180deg)"
         });
         cardTurn[cardTurned] = $(this).attr('id')
-        console.log(cardTurn[cardTurned])
         cardTurned++;
         controlCardTurned();
     }
@@ -779,10 +786,4 @@ function controlWin() {
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-}
-
-for (var i = 0; i < document.querySelectorAll(".goodbyeDIV path").length; i++) {
-    console.log("jjsja")
-    console.log(document.querySelectorAll(".goodbyeDIV path")[i].getTotalLength())
-
 }
