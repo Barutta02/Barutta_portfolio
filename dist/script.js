@@ -535,7 +535,7 @@ tween.to('.word1', 1, {
         top: "-100%",
         ease: Power1.easeInOut,
         onComplete: function() {
-            $("#sottotitoli").text("Today I continue to study whatever can be useful to my passion for programming and <br> when I can I try to add a little creativity and good taste to my ideas.")
+            $("#sottotitoli").text("Today I continue to study whatever can be useful to my passion for programming and when I can I try to add a little creativity and good taste to my ideas.")
 
         },
         onReverseComplete: function() {
