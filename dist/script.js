@@ -459,11 +459,36 @@ tween.to('.word1', 1, {
         display: "flex",
         ease: Power1.easeInOut,
     }, 16)
+    .to('.volleyBall', 1, {
+        bottom: '0px',
+        left: '25%',
+        rotateZ: "100deg",
+        ease: Power1.easeInOut,
+    }, 16)
+    .to('.volleyBall', .5, {
+        bottom: '100px',
+        left: '35%',
+        rotateZ: "200deg",
+        ease: Power1.easeInOut,
+    }, 17)
+    .to('.volleyBall', .5, {
+        bottom: '0px',
+        left: '45%',
+        rotateZ: "300deg",
+        ease: Power1.easeInOut,
+    }, 17.5)
+    .to('.volleyBall', .5, {
+        bottom: '0px',
+        left: '55%',
+        rotateZ: "400deg",
+        opacity: 0,
+        ease: Power1.easeInOut,
+    }, 18)
     .to('.photos', 1, {
         left: '-50%',
         ease: Power1.easeInOut,
     }, 17)
-    .to('.photos img', 1, {
+    .to('.photos .boxImages', 1, {
         rotationY: "180deg",
         opacity: 0,
         ease: Power1.easeInOut,
@@ -495,24 +520,25 @@ tween.to('.word1', 1, {
     }, 19)
 
 .to('.memoryContenitor', 1.5, {
-        display: "flex",
-        ease: Power1.easeInOut,
-        onComplete: function() {
-            $("#sottotitoli").text("So I decided to dedicate some of the time I dedicated to sport to the study of computer programming and web developing.")
-            $(".googleSearch").css("display", "block")
-        },
-        onReverseComplete: function() {
-            $("#sottotitoli").text("In high school I discovered my passion for computer science born from small school projects like this memory.")
-            $(".memoryContenitor").css("display", "")
-        }
+    display: "flex",
+    ease: Power1.easeInOut,
+    onComplete: function() {
+        $("#sottotitoli").text("So I decided to dedicate some of the time I dedicated to sport to the study of computer programming and web developing.")
+        $(".googleSearch").css("display", "block")
+    },
+    onReverseComplete: function() {
+        $("#sottotitoli").text("In high school I discovered my passion for computer science born from small school projects like this memory.")
+        $(".memoryContenitor").css("display", "")
+    }
 
-    }, 20)
+}, 20)
+
+.to('.memoryContenitor', 1, {
+        display: "",
+        ease: Power1.easeInOut,
+    }, 23)
     .to('.blackground', 1.5, {
         background: "#fff",
-        ease: Power1.easeInOut,
-    }, 19)
-    .to('.memoryContenitor', 1, {
-        display: "",
         ease: Power1.easeInOut,
     }, 23)
     .to('.googleSearch', 1, {
