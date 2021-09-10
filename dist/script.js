@@ -459,12 +459,12 @@ tween.to('.word1', 1, {
         display: "flex",
         ease: Power1.easeInOut,
     }, 16)
-    .to('.volleyBall', 1, {
+    .to('.volleyBall', .5, {
         bottom: '0px',
         left: '25%',
         rotateZ: "100deg",
         ease: Power1.easeInOut,
-    }, 16)
+    }, 16.5)
     .to('.volleyBall', .5, {
         bottom: '100px',
         left: '35%',
