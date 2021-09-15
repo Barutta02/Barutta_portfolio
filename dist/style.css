@@ -528,6 +528,7 @@ Social media box
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .accountName {
