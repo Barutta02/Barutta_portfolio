@@ -79,6 +79,22 @@ p1light.position.set(.2, 0, 1.1);
 
 //MOUSE for smooth movement
 
+//Loading manager
+
+
+let manager = new THREE.LoadingManager();
+
+manager.onProgress = function() {
+    console.log('loading');
+};
+manager.onLoad = function() {
+    console.log('loaded');
+    $("#loadingDIV").css("display", "none");
+};
+manager.onError = function() {
+    console.log('there has been an error');
+};
+
 function init() {
 
     /*  loader.load("/3dmodel/nome.glb", function(gltf) {
@@ -93,10 +109,10 @@ function init() {
     sphere = new THREE.Mesh(
         new THREE.SphereGeometry(0.5, 64, 64),
         new THREE.MeshBasicMaterial({
-            map: new THREE.TextureLoader().load('../static/images/worldBest.jpg'),
-            bumpMap: new THREE.TextureLoader().load('../static/images/elev_bump_4k.jpg'),
+            map: new THREE.TextureLoader().load('../static/images/worldBest.jpg', manager.onLoad()),
+            bumpMap: new THREE.TextureLoader().load('../static/images/elev_bump_4k.jpg', manager.onLoad()),
             bumpScale: 0.005,
-            specularMap: new THREE.TextureLoader().load('../static/images/water_4k.png'),
+            specularMap: new THREE.TextureLoader().load('../static/images/water_4k.png', manager.onLoad()),
             specular: new THREE.Color('grey')
         })
     )
@@ -105,20 +121,20 @@ function init() {
     cloud = new THREE.Mesh(
         new THREE.SphereGeometry(0.503, 32, 32),
         new THREE.MeshBasicMaterial({
-            map: new THREE.TextureLoader().load('../static/images/fair_clouds_4k.png'),
+            map: new THREE.TextureLoader().load('../static/images/fair_clouds_4k.png', manager.onLoad()),
             transparent: true
         })
     );
     moon = new THREE.Mesh(
         new THREE.SphereGeometry(0.1, 32, 32),
         new THREE.MeshBasicMaterial({
-            map: new THREE.TextureLoader().load('../static/images/moon.jfif'),
+            map: new THREE.TextureLoader().load('../static/images/moon.jfif', manager.onLoad()),
         })
     );
     galaxy = new THREE.Mesh(
         new THREE.SphereGeometry(90, 64, 64),
         new THREE.MeshBasicMaterial({
-            map: new THREE.TextureLoader().load('../static/images/galaxy_starfield.png'),
+            map: new THREE.TextureLoader().load('../static/images/galaxy_starfield.png', manager.onLoad()),
             side: THREE.BackSide
         })
     );
