@@ -662,7 +662,6 @@ Social media box
     transform-style: preserve-3d;
     transition: transform 1s;
     transform: translateZ(-100px) rotateY( 0deg);
-    background: #121212;
 }
 
 .cube__face {
