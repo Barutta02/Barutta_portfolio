@@ -540,7 +540,7 @@ tween.to('.word1', 1, {
     .to('.blackground', 1.5, {
         background: "#fff",
         ease: Power1.easeInOut,
-    }, 23)
+    }, 20)
     .to('.googleSearch', 1, {
         opacity: 1,
         ease: Power1.easeInOut,

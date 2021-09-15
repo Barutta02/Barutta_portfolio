@@ -486,6 +486,75 @@ body {
     top: 75px;
 }
 
+
+/*
+Social media box
+*/
+
+.socialMedia {
+    background: #e9eff0;
+    border-radius: 50px;
+    width: 70%;
+    height: 350px;
+    position: relative;
+    top: -100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.socialMediaBox {
+    background: #dce3e8;
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+    box-shadow: 0 5.1px 5.8px -19px rgba(0, 0, 0, 1), 0 11.1px 13.3px -19px rgba(0, 0, 0, 1), 0 18.6px 23.6px -19px rgba(0, 0, 0, 0.06), 0 29px 39.9px -19px rgba(0, 0, 0, 0.072), 0 45.9px 70.6px -19px rgba(0, 0, 0, 0.086), 0 92px 159px -19px rgba(0, 0, 0, 0.12);
+}
+
+.socialMediaBox img {
+    width: 50%;
+    position: relative;
+    top: 25%;
+}
+
+.boxAccount {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.accountName {
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.instagram {
+    background: -webkit-linear-gradient(left, #7f59b9, #c4436d, #dc8e42);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.facebook {
+    background: -webkit-linear-gradient(left, #2f5bc5, #8e5bbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gmail {
+    background: -webkit-linear-gradient(left, #4285f3, #c53330, #ea453c, #febd53, #42ac48);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/*
+Social media box
+*/
+
 .howIMG {
     padding-top: 5px;
 }
@@ -1101,9 +1170,7 @@ input[value="on"]:checked~.lamp:before {
 /*-_------------------*/
 
 .memoryContenitor {
-    background-image: linear-gradient(to right, transparent, #0e1212 38%), url('../static/images/front2.jpeg');
-    background-repeat: no-repeat;
-    background-size: contain;
+    background: #e9eff0;
     width: 100%;
     height: 100%;
     /* padding: 5%; */
@@ -1121,17 +1188,28 @@ input[value="on"]:checked~.lamp:before {
 }
 
 .memoryContenitor .card {
-    width: 100px;
-    height: 150px;
-    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(39, 3, 63, 1));
+    width: 150px;
+    height: 200px;
     background-size: contain;
-    background-color: #e0f1f8;
+    background-color: #dce3e8;
     background-image: url("../static/images/explode.webp");
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 5%;
     transition: .5s;
-    box-shadow: 0 2.8px 2.2px rgba(104, 42, 233, 0.034), 0 6.7px 5.3px rgba(104, 42, 233, 0.048), 0 12.5px 10px rgba(104, 42, 233, 0.06), 0 22.3px 17.9px rgba(104, 42, 233, 0.072), 0 41.8px 33.4px rgba(104, 42, 233, 0.086), 0 100px 80px rgba(104, 42, 233, 0.12);
+    box-shadow: 0 5.1px 5.8px -19px rgba(0, 0, 0, 1), 0 11.1px 13.3px -19px rgba(0, 0, 0, 1), 0 18.6px 23.6px -19px rgba(0, 0, 0, 0.06), 0 29px 39.9px -19px rgba(0, 0, 0, 0.072), 0 45.9px 70.6px -19px rgba(0, 0, 0, 0.086), 0 92px 159px -19px rgba(0, 0, 0, 0.12);
+}
+
+.memoryTitle {
+    font-size: 4em;
+    font-weight: bold;
+    background: -webkit-linear-gradient(left, #7f59b9, #c4436d, #dc8e42);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
 }
 
 
