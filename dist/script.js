@@ -80,7 +80,7 @@ p1light.position.set(.2, 0, 1.1);
 //MOUSE for smooth movement
 
 //Loading manager
-
+var loadingContent = 0;
 
 let manager = new THREE.LoadingManager();
 
@@ -89,7 +89,9 @@ manager.onProgress = function() {
 };
 manager.onLoad = function() {
     console.log('loaded');
-    $("#loadingDIV").css("display", "none");
+    loadingContent++;
+    if (loadingContent == 6)
+        $("#loadingDIV").css("display", "none");
 };
 manager.onError = function() {
     console.log('there has been an error');
