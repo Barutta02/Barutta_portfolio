@@ -539,13 +539,16 @@ body {
 Social media box
 */
 
-.socialMedia {
+.socialMedia_sub {
     background: #e9eff0;
-    border-radius: 50px;
-    width: 70%;
-    height: 350px;
+    border-radius: 12px;
+    width: 90vw;
+    height: 800px;
     position: relative;
     top: -100px;
+}
+
+.socialMediaDIV {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -605,10 +608,162 @@ Social media box
     -webkit-text-fill-color: transparent;
 }
 
+.subjectProgress .title {
+    display: block;
+    color: #000;
+    font-weight: 900;
+    font-size: 2em;
+    font-family: system-ui;
+    text-align: left;
+    padding: 30px;
+}
+
+.subjects {
+    width: 90%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: scroll;
+}
+
+.subject {
+    margin: 10px;
+    background: #dce3e8;
+    height: 300px;
+    min-width: 350px;
+    position: relative;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.subjects .icon {
+    display: block;
+    width: 25%;
+    margin: 30px;
+}
+
+.subjects .icon img {
+    width: 100%;
+}
+
+.socialMedia_sub .info_1 {
+    padding: 10px;
+    width: 90%;
+    font-weight: 700;
+    position: relative;
+    left: 5%;
+    font-size: .9em;
+}
+
+.socialMedia_sub .info_2 {
+    color: #8a9194;
+    font-size: .7em;
+    font-weight: 600;
+    display: inline-flex;
+    padding-left: 10px;
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+.socialMedia_sub .bollino {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.progress {
+    padding-left: 10px;
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+.progress progress {
+    width: 100%;
+    height: 15px;
+    border-radius: 10px;
+}
+
+.html progress::-moz-progress-bar {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    ;
+}
+
+.html progress::-webkit-progress-value {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-radius: 10px;
+}
+
+.css progress::-moz-progress-bar {
+    background: linear-gradient(to right, #0575e6, #021b79);
+    ;
+}
+
+.css progress::-webkit-progress-value {
+    background: linear-gradient(to right, #0575e6, #021b79);
+    border-radius: 10px;
+}
+
+.js progress::-moz-progress-bar {
+    background: linear-gradient(to right, #fffc00, #ffffff);
+    ;
+}
+
+.js progress::-webkit-progress-value {
+    background: linear-gradient(to right, #fffc00, #ffffff);
+    border-radius: 10px;
+}
+
+.node progress::-moz-progress-bar {
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    ;
+}
+
+.node progress::-webkit-progress-value {
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    border-radius: 10px;
+}
+
+.php progress::-moz-progress-bar {
+    background: linear-gradient(to right, #834d9b, #d04ed6);
+    ;
+}
+
+.php progress::-webkit-progress-value {
+    background: linear-gradient(to right, #834d9b, #d04ed6);
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-bar {
+    background: #d7d7d8;
+    border-radius: 10px;
+}
+
 
 /*
 Social media box
 */
+
+.subjects::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.subjects::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.subjects::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #e1b629;
+}
 
 .howIMG {
     padding-top: 5px;
