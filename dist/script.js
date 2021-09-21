@@ -26,28 +26,15 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting == true) {
             entry.target.classList.add("animate")
+        } else {
+            entry.target.classList.remove("animate")
         }
-        /*else {
-                   entry.target.classList.remove("animate")
-               }*/
     })
 })
 
 titles.forEach(title => observer.observe(title))
 
-//ANIMATION PLANE
 
-const planes = document.querySelectorAll(".animPlane")
-const observer1 = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting == true) {
-            entry.target.classList.add("planeAnimation")
-        } else {
-            entry.target.classList.remove("planeAnimation")
-        }
-    })
-})
-planes.forEach(planes => observer1.observe(planes))
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
