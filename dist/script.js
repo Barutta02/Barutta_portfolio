@@ -42,6 +42,8 @@ const observer1 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting == true) {
             entry.target.classList.add("planeAnimation")
+        } else {
+            entry.target.classList.remove("planeAnimation")
         }
     })
 })
