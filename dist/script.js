@@ -1,5 +1,6 @@
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
 
+
 let model;
 
 // Debug
@@ -583,6 +584,14 @@ tween.to('.word1', 1, {
     .to('.finalImage', 1, {
         opacity: 1,
         ease: Power1.easeInOut,
+        onComplete: function() {
+            $("#containerWaves").css("z-index", "26")
+
+        },
+        onReverseComplete: function() {
+            $("#containerWaves").css("z-index", "0")
+
+        }
 
     }, 27.5)
     .to('.goodbyeDIV path', 1, {
@@ -591,6 +600,12 @@ tween.to('.word1', 1, {
         ease: Power1.easeInOut
 
     }, 28)
+    .to('#containerWaves', 4, {
+
+        opacity: 1,
+        ease: Power1.easeInOut
+
+    }, 30)
 
 
 
@@ -624,7 +639,7 @@ const controller = new ScrollMagic.Controller();
 
 const scene1 = new ScrollMagic.Scene({
         triggerElement: '.scrollAnimationDIV',
-        duration: 30000,
+        duration: 35000,
         triggerHook: trigHook
 
     })

@@ -938,6 +938,24 @@ label {
 }
 
 
+/*..WAVES.*/
+
+#containerWaves {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+}
+
+.phrase {
+    top: 150px;
+    transform: translateX(-50%);
+    left: 50%;
+    position: fixed;
+}
+
+
 /*-------*/
 
 .quadrato {
