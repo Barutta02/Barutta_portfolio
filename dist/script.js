@@ -27,9 +27,10 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting == true) {
             entry.target.classList.add("animate")
-        } else {
-            entry.target.classList.remove("animate")
         }
+        /*else {
+                   entry.target.classList.remove("animate")
+               }*/
     })
 })
 
