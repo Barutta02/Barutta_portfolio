@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding:0;
+    background: #111;
+    overflow: hidden;
+}
+.object{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+.text{
+    height: 60vh;
+    width: 40vw;
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    color: #fff;
+    font-family: system-ui;
+    font-size: 1em;
+}
+
+.title{
+    font-size: 2em;
+}
+
+.main{
+    padding-top: 10px;
+    color: #6d6d6d;
+}
+.main a{
+    color: #6d6d6d;
+}
+@media only screen and (max-width: 600px) {
+    .object{
+        top:15%;
+        left: 0;
+    }
+    .text{
+        width: 100vw;
+        top:10vh;
+    }
+  }
