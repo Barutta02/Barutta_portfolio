@@ -64,6 +64,7 @@ header {
     justify-content: flex-start;
     width: 100%;
     list-style: none;
+    overflow-x: scroll;
 }
 
 #argumentList li {
