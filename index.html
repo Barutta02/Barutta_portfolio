@@ -20,7 +20,7 @@
             <li><a href="#profileSection"><p>Profilo, percorso di studi e onoreficenze</p>
                 <div class="argumentIcon user"></div></a>
             </li>
-            <li><a href="#profileSection"><p>Competenze e skills tecniche e tecnologiche</p>
+            <li><a href="#SkillSection"><p>Competenze tecniche e tecnologiche e lingue</p>
                 <div class="argumentIcon skill"></div></a>
             </li>
             <li><a href="#profileSection"><p>Progetti accademici e personali</p>
@@ -36,7 +36,7 @@
         <section id="profileSection">
             <div class="sectionHeader"> <img src="assets/images/profile.jpeg" alt="Immagine di profilo di Andrea Barutta" id="profilePicture">
                 <h2 class="roboto-regular">Profilo</h2></div>
-            <p>Sono un individuo rapido nell'apprendimento, proattivo e autonomo, determinato nel raggiungere gli obiettivi
+            <p class="freeParagraph">Sono un individuo rapido nell'apprendimento, proattivo e autonomo, determinato nel raggiungere gli obiettivi
                 con concentrazione e puntualità. La passione per la tecnologia mi spinge costantemente verso l'innovazione.
                 Nonostante l'impegno nel volley semi-professionistico e come allenatore, ho mantenuto una carriera scolastica e
                 accademica di alto livello. Competendo nella Serie B nazionale con la squadra di Massanzago e ricoprendo il ruolo
@@ -47,16 +47,16 @@
                 <div>
                     <div class="sectionSubHeader"><div class="subHeaderIcon school"></div><h3>Percorso di studi</h3></div>
                    <div  class="SubSectionGroup">
-                    <dl>
-                        <dt>Percorso:</dt>
+                    <dl class="studyPath">
+                        <dt class="headerStudy">Percorso:</dt>
                         <dd>Laurea in informatica</dd> 
                         <dt>Luogo:</dt>
                         <dd> Università degli studi di Padova </dd>
                         <dt>Periodo:</dt>
                         <dd> 01/10/2021 – Attuale</dd>
                     </dl>
-                    <dl>
-                        <dt>Percorso:</dt>
+                    <dl class="studyPath">
+                        <dt class="headerStudy">Percorso:</dt>
                         <dd>Diploma tecnico informatico</dd>
                         <dt>Luogo:</dt>
                         <dd>ITIS Levi Ponti - Mirano (<abbr title="Venezia">VE</abbr>)</dd>
@@ -69,7 +69,7 @@
                 </div>
             <div>
                 <div class="sectionSubHeader"><div class="subHeaderIcon honour"></div><h3>Onoreficenze</h3></div>
-                <dl>
+                <dl class="honourList">
                     <dt>Premi studio per merito ottenuti - Università degli studi di Padova</dt>
                     <dd>- Incentivo allo studio per lauree scientifiche - Anno 2022</dd>
                     <dd>- Incentivo allo studio per lauree scientifiche - Anno 2023</dd>
@@ -77,6 +77,84 @@
                 </dl>
             </div>
             
+        </section>
+        <section id="SkillSection">
+            <div class="sectionHeader headerSkill"> <div id="skillsImage"></div>
+                <h2 class="roboto-regular">Competenze</h2></div>
+            <div class="SkillBody SubSectionGroup">
+                <div id="categories">
+                    <h5>Categorie</h5>
+
+                    <ul>
+                        <li><button onclick="showSkills('webDevSkills')" id="webdevButton">Sviluppo Web</button> </li>
+                        <li ><button onclick="showSkills('ProgrammingSkill')" id="ProgrammingdevButton">Programmazione</button></li>
+                        <li><button onclick="showSkills('Develop')" id="softwareButton">Sviluppo software</button></li>
+                        <li><button onclick="showSkills('Other')" id="OtherdevButton">Altro</button></li>
+                    </ul>
+                </div>
+                <div class="skills" id="skillsContainer">
+                    <div class="skillCard webDevSkills">
+                        <h5>Sviluppo Web</h5>
+                        <ul>
+                            <ul>
+                                <li>Web Design</li>
+                                <li>Web Accessibility</li>
+                                <li>HTML5</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                                <li>Coding PHP</li>
+                                <li>Django</li>
+                                <li>Responsive Design</li>
+                                <li>Bootstrap</li>
+                                <li>Usability Principles</li>
+                                <li>Browser Developer Tools</li>
+                                <li>JSON</li>
+                                <li>jQuery</li>
+                                <li>Buona conoscenza di WebGL e libreria Three.js</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="skillCard ProgrammingSkill">
+                        <h5>Programmazione</h5>
+                        <ul>
+                            <li>Java</li>
+                            <li>C++</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>Paradigmi di programmazione</li>
+                        </ul>
+                    </div>
+                    <div class="skillCard Develop">
+                        <h5>Sviluppo software
+                        </h5>
+                        <ul>
+                            <li>Testing: Automazione test</li>
+                            <li>Test di unità</li>
+                            <li>Test di integrazione</li>
+                            <li>Test funzionali</li>
+                            <li>Metodologie Agile</li>
+                            <li>DevOps</li>
+                            <li>Git</li>
+                            <li>GitHub Action</li>
+                            <li>Fondamenti di SCRUM e Agile</li>
+                            <li>Docker</li>
+                            <li>Jira</li>
+                        </ul>
+                    </div>
+                    <div class="skillCard Other">
+                        <h5>Altro</h5>
+                        <ul>
+                            <li>Competenza in Big Data e Stream Processing (Apache Kafka, ClickHouse, Grafana)</li>
+                            <li>Competenza nella progettazione, sviluppo e interrogazione di database relazionali</li>
+                            <li>Competenze di base in sicurezza informatica: principi e best practice per la protezione dei dati</li>
+                            <li>Sistemi Operativi: Competenza avanzata in ambiente Windows e Linux</li>
+                            <li>Marketing (Base)</li>
+                            <li>Web Marketing base</li>
+                            <li>Programmazioni di microcontrollori ESP-32</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     </main>
@@ -90,6 +168,6 @@
         </p>
     </footer>
 
-    <script src="script/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

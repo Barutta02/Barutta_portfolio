@@ -14,6 +14,7 @@
     --subtitlesColor: #c4c8c5;
     --titleFontSize: 3.5rem;
     --titleFontSizeh3: 1.5rem;
+    --titleFontSizeh3: 1.2em;
     --bard-color-brand-text-gradient-stop-1: #4285f4;
     --bard-color-brand-text-gradient-stop-1-rgb: 66, 133, 244;
     --bard-color-brand-text-gradient-stop-2: #9b72cb;
@@ -22,6 +23,8 @@
     --bard-color-surface: #fff;
     --cardColor: #f1f3fa;
     --cardColorHover: #e4e4e6;
+    --DefaultPadding: 1em;
+    --headerPadding: 3em;
 
 }
 
@@ -35,6 +38,10 @@ html {
 }
 
 .onlyMobile {
+    display: none;
+}
+
+.hidden {
     display: none;
 }
 
@@ -52,9 +59,18 @@ a:visited {
     color: var(--visitedLinkColor);
 }
 
+ul {
+    list-style: none;
+}
+
+ul li {
+    text-decoration: none;
+}
+
 header {
     background-color: var(--headerBgColor);
-    padding: 3em;
+    padding: var(--headerPadding);
+    overflow: hidden;
 }
 
 #argumentList {
@@ -64,7 +80,7 @@ header {
     justify-content: flex-start;
     width: 100%;
     list-style: none;
-    overflow-x: scroll;
+    overflow: auto;
 }
 
 #argumentList li {
@@ -72,10 +88,10 @@ header {
     border-radius: 10px;
     width: 200px;
     height: 200px;
-    padding: 1em;
+    padding: var(--DefaultPadding);
     margin-right: .5em;
     margin-top: .5em;
-
+    flex-shrink: 0;
 }
 
 #argumentList li a {
@@ -134,11 +150,15 @@ h3 {
     font-size: var(--titleFontSizeh3);
     font-weight: 500;
     line-height: normal;
+}
+
+h5 {
+    font-size: var(--titleFontSizeh5);
 
 }
 
 header h1 {
-    background: linear-gradient(74deg, var(--bard-color-brand-text-gradient-stop-1) 0, var(--bard-color-brand-text-gradient-stop-2) 9%, var(--bard-color-brand-text-gradient-stop-3) 20%, var(--bard-color-brand-text-gradient-stop-3) 24%, var(--bard-color-brand-text-gradient-stop-2) 35%, var(--bard-color-brand-text-gradient-stop-1) 44%, var(--bard-color-brand-text-gradient-stop-2) 50%, var(--bard-color-brand-text-gradient-stop-3) 56%, var(--bard-color-surface) 75%, var(--bard-color-surface) 100%);
+    background: linear-gradient(74deg, var(--bard-color-brand-text-gradient-stop-1) 0, var(--bard-color-brand-text-gradient-stop-2) 50%, var(--bard-color-brand-text-gradient-stop-3) 0%, var(--bard-color-brand-text-gradient-stop-3) 60%, var(--bard-color-brand-text-gradient-stop-2) 80%, var(--bard-color-brand-text-gradient-stop-1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
@@ -152,14 +172,18 @@ header h2 {
 
 main {
     margin: 0;
-    padding: 1em;
+    padding: var(--DefaultPadding);
 }
 
 footer {
     background-color: var(--footerBgColor);
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 55px;
+    margin-bottom: 20px;
+}
+
+section {
+    padding-bottom: var(--DefaultPadding);
 }
 
 section p,
@@ -181,6 +205,7 @@ dd {
 
 .sectionHeader {
     text-align: center;
+    text-align: -webkit-center;
 }
 
 .SubSectionGroup {
@@ -193,7 +218,7 @@ dd {
 .SubSectionGroup>div {
     background: var(--cardColor);
     border-radius: 10px;
-    padding: 1em;
+    padding: var(--defaultPadding);
     flex-grow: 1;
     margin: .5em;
 }
@@ -203,6 +228,7 @@ dd {
     grid-template-columns: 1fr 1fr;
     grid-gap: .5em;
     width: min-content;
+    padding: var(--DefaultPadding)
 }
 
 .subHeaderIcon {
@@ -221,6 +247,11 @@ dd {
     background-image: url('assets/icon/wreath.png');
 }
 
+.freeParagraph {
+    padding: var(--DefaultPadding);
+    text-align: justify;
+}
+
 /*Profile section*/
 #profilePicture {
     border-radius: 50%;
@@ -229,6 +260,119 @@ dd {
 }
 
 
+
+.headerStudy {
+    margin-left: -1em;
+}
+
+.studyPath {
+    border-left: 2px solid var(--textColor);
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+    width: 200px;
+}
+
+.honourList {
+    padding: var(--DefaultPadding);
+}
+
+/*SKILL SECTION*/
+#SkillSection {
+    text-align: -webkit-center;
+}
+
+#skillsImage {
+    background-image: url(assets/icon/skills.gif);
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.headerSkill {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: .5em;
+    width: min-content;
+
+}
+
+button {
+    background-color: #e3e2ed;
+    border-radius: 5px;
+    padding: .7em;
+    margin: 1em;
+    border: 0;
+    width: 200px;
+}
+
+#skillsContainer {
+    background-color: var(--backgroundColor);
+}
+
+.skillCard {
+    background-color: var(--cardColor);
+    padding: var(--DefaultPadding);
+    margin: .5em;
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+#categories {
+    background: none;
+}
+
+
+
+.skills ul {
+    text-align: left;
+    padding: var(--DefaultPadding);
+}
+
+.skills li {
+    background-color: #e3e2ed;
+    border-radius: 5px;
+    padding: .2em;
+    margin: .2em;
+    display: inline-block;
+}
+
+
+#webdevButton::before,
+#ProgrammingdevButton::before,
+#softwareButton::before,
+#OtherdevButton::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: .3em;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#webdevButton::before {
+    background-image: url(assets/icon/domain.png);
+
+}
+
+#ProgrammingdevButton::before {
+    background-image: url(assets/icon/coding.png);
+
+}
+
+#softwareButton::before {
+    background-image: url(assets/icon/scrum.png);
+
+}
+
+#OtherdevButton::before {
+    background-image: url(assets/icon/skill-development.png);
+
+}
 
 /* Stili per schermi di larghezza massima 600px */
 
@@ -241,7 +385,13 @@ dd {
 
 /* Stili per schermi mobile */
 
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+    :root {
+        --headerPadding: 1.5em;
+        --titleFontSize: 2.5rem;
+        --titleFontSizeh3: 1.5rem;
+    }
+}
 
 
 /* Stili per schermi di larghezza superiore a 1024 */
