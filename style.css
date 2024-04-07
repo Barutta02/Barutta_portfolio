@@ -26,7 +26,6 @@
     --DefaultPadding: 1em;
     --headerPadding: 3em;
     --commentColor: #0a930a;
-
 }
 
 html {
@@ -36,6 +35,7 @@ html {
     margin: auto;
     background-color: var(--backgroundColor);
     color: var(--textColor);
+    scroll-behavior: smooth;
 }
 
 .onlyMobile {
@@ -70,6 +70,14 @@ ul li {
 
 .comment {
     color: var(--commentColor);
+}
+
+.comment::before {
+    content: "/* ";
+}
+
+.comment::after {
+    content: "*/";
 }
 
 header {
@@ -148,7 +156,6 @@ h2 {
     font-size: var(--titleFontSize);
     font-weight: 500;
     line-height: normal;
-
 }
 
 h3 {
@@ -159,7 +166,6 @@ h3 {
 
 h5 {
     font-size: var(--titleFontSizeh5);
-
 }
 
 header h1 {
@@ -169,7 +175,6 @@ header h1 {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
-
 
 header h2 {
     color: var(--subtitlesColor);
@@ -252,21 +257,19 @@ dd {
     background-image: url('assets/icon/wreath.png');
 }
 
-
-
 .freeParagraph {
     padding: var(--DefaultPadding);
     text-align: justify;
 }
 
+
 /*Profile section*/
+
 #profilePicture {
     border-radius: 50%;
     width: 100px;
     height: 100px;
 }
-
-
 
 .headerStudy {
     margin-left: -1em;
@@ -285,7 +288,6 @@ dd {
 
 .link {
     background-color: #83d5e3 !important;
-
 }
 
 .tag::before {
@@ -294,7 +296,6 @@ dd {
 
 .link::before {
     background-image: url(assets/icon/link.png);
-
 }
 
 .honourList {
@@ -310,16 +311,16 @@ dd {
     height: 50px;
 }
 
+
 /*SKILL SECTION*/
+
 .SectionDefault {
     text-align: -webkit-center;
 }
 
-
 #skillsImage {
     background-image: url(assets/icon/skills.gif);
 }
-
 
 .headerSectionDefault {
     display: grid;
@@ -327,7 +328,6 @@ dd {
     align-items: center;
     grid-gap: .5em;
     width: min-content;
-
 }
 
 button {
@@ -355,8 +355,6 @@ button {
 #categories {
     background: none;
 }
-
-
 
 .skills ul {
     text-align: left;
@@ -393,22 +391,18 @@ button {
 
 #webdevButton::before {
     background-image: url(assets/icon/domain.png);
-
 }
 
 #ProgrammingdevButton::before {
     background-image: url(assets/icon/coding.png);
-
 }
 
 #softwareButton::before {
     background-image: url(assets/icon/scrum.png);
-
 }
 
 #OtherdevButton::before {
     background-image: url(assets/icon/skill-development.png);
-
 }
 
 #LangButton::before {
@@ -427,7 +421,9 @@ button {
     padding-left: 2.5em;
 }
 
+
 /*Projects*/
+
 #ProjectsImage {
     background-image: url(assets/icon/layers.png);
 }
@@ -443,7 +439,6 @@ button {
 .projectTitle {
     font-size: large;
     padding-bottom: 1em;
-
 }
 
 .topDivider {
@@ -452,10 +447,267 @@ button {
     padding-top: 1em;
 }
 
+.projectImage {
+    width: 100%;
+    max-width: 400px;
+    padding-top: var(--DefaultPadding);
+    display: inline;
+}
+
+.projectImageContainer {
+    text-align: -webkit-center;
+}
+
+
+/*SOCIAL MEDIA*/
+
+
+/*
+Social media box
+*/
+
+#ContactImage {
+    background-image: url(assets/icon/contact.png);
+}
+
+.socialMedia_sub {
+    background: #e9eff0;
+    border-radius: 12px;
+    width: 90vw;
+    height: 500px;
+    position: relative;
+    top: -100px;
+}
+
+.socialMediaDIV {
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 30px;
+}
+
+.socialMediaDIV::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.socialMediaDIV::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.socialMediaDIV::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #e1b629;
+}
+
+.socialMediaBox {
+    background: #dce3e8;
+    height: 150px;
+    width: 150px;
+    text-align: -webkit-center;
+    border-radius: 50px;
+    transition: .5s;
+    box-shadow: 0 5.1px 5.8px -19px rgba(0, 0, 0, 1), 0 11.1px 13.3px -19px rgba(0, 0, 0, 1), 0 18.6px 23.6px -19px rgba(0, 0, 0, 0.06), 0 29px 39.9px -19px rgba(0, 0, 0, 0.072), 0 45.9px 70.6px -19px rgba(0, 0, 0, 0.086), 0 92px 159px -19px rgba(0, 0, 0, 0.12);
+}
+
+.socialMediaBox:hover {
+    transform: scale(1.05);
+    box-shadow: 2.7px 6px 2.2px rgba(0, 0, 0, 0.042), 6.5px 14.4px 5.3px rgba(0, 0, 0, 0.061), 12.1px 27.2px 10px rgba(0, 0, 0, 0.075), 21.7px 48.5px 17.9px rgba(0, 0, 0, 0.089), 40.5px 90.7px 33.4px rgba(0, 0, 0, 0.108), 97px 217px 80px rgba(0, 0, 0, 0.15);
+}
+
+.socialMediaBox img {
+    width: 50%;
+    position: relative;
+    top: 25%;
+}
+
+.boxAccount {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.accountName {
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.instagram {
+    background: -webkit-linear-gradient(left, #7f59b9, #c4436d, #dc8e42);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.facebook {
+    background: -webkit-linear-gradient(left, #2f5bc5, #8e5bbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gmail {
+    background: -webkit-linear-gradient(left, #4285f3, #c53330, #ea453c, #febd53, #42ac48);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subjectProgress .title {
+    display: block;
+    color: #000;
+    font-weight: 900;
+    font-size: 2em;
+    font-family: system-ui;
+    text-align: left;
+    padding: 30px;
+}
+
+.subjects {
+    width: 90%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: scroll;
+}
+
+.subject {
+    margin: 10px;
+    background: #dce3e8;
+    height: 300px;
+    min-width: 350px;
+    position: relative;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.subjects .icon {
+    display: block;
+    width: 25%;
+    margin: 30px;
+}
+
+.subjects .icon img {
+    width: 100%;
+}
+
+.socialMedia_sub .info_1 {
+    padding: 10px;
+    width: 90%;
+    font-weight: 700;
+    position: relative;
+    left: 5%;
+    font-size: .9em;
+}
+
+.socialMedia_sub .info_2 {
+    color: #8a9194;
+    font-size: .7em;
+    font-weight: 600;
+    display: inline-flex;
+    padding-left: 10px;
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+.socialMedia_sub .bollino {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.progress {
+    padding-left: 10px;
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+.progress progress {
+    width: 100%;
+    height: 15px;
+    border-radius: 10px;
+}
+
+.html progress::-moz-progress-bar {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    ;
+}
+
+.html progress::-webkit-progress-value {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-radius: 10px;
+}
+
+.css progress::-moz-progress-bar {
+    background: linear-gradient(to right, #0575e6, #021b79);
+    ;
+}
+
+.css progress::-webkit-progress-value {
+    background: linear-gradient(to right, #0575e6, #021b79);
+    border-radius: 10px;
+}
+
+.js progress::-moz-progress-bar {
+    background: linear-gradient(to right, #fffc00, #ffffff);
+    ;
+}
+
+.js progress::-webkit-progress-value {
+    background: linear-gradient(to right, #fffc00, #ffffff);
+    border-radius: 10px;
+}
+
+.node progress::-moz-progress-bar {
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    ;
+}
+
+.node progress::-webkit-progress-value {
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    border-radius: 10px;
+}
+
+.php progress::-moz-progress-bar {
+    background: linear-gradient(to right, #834d9b, #d04ed6);
+    ;
+}
+
+.php progress::-webkit-progress-value {
+    background: linear-gradient(to right, #834d9b, #d04ed6);
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-bar {
+    background: #d7d7d8;
+    border-radius: 10px;
+}
+
+
+/*
+Social media box
+*/
+
+
 /* Stili per schermi di larghezza massima 600px */
 
 @media only screen and (max-width: 850px) {
     .onlyMobile {
+        display: block;
+    }
+    .projectImage {
         display: block;
     }
 }
@@ -464,7 +716,7 @@ button {
 /* Stili per schermi mobile */
 
 @media only screen and (max-width: 480px) {
-    :root {
+     :root {
         --headerPadding: 1.5em;
         --titleFontSize: 2.5rem;
         --titleFontSizeh3: 1.5rem;
