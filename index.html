@@ -75,21 +75,24 @@
                     <dd>- Incentivo allo studio per lauree scientifiche - Anno 2023</dd>
                     <dd>- Premi di studio WEGG in memoria di Marcello Molinari - Anno 2023</dd>
                 </dl>
-            </div>
-            
+            </div> 
+        </div> 
+
         </section>
-        <section id="SkillSection">
-            <div class="sectionHeader headerSkill"> <div id="skillsImage"></div>
+        <section class="SectionDefault">
+            <div class="sectionHeader headerSectionDefault"> <div id="skillsImage" class="imageTitle"></div>
                 <h2 class="roboto-regular">Competenze</h2></div>
             <div class="SkillBody SubSectionGroup">
                 <div id="categories">
                     <h5>Categorie</h5>
 
                     <ul>
-                        <li><button onclick="showSkills('webDevSkills')" id="webdevButton">Sviluppo Web</button> </li>
-                        <li ><button onclick="showSkills('ProgrammingSkill')" id="ProgrammingdevButton">Programmazione</button></li>
-                        <li><button onclick="showSkills('Develop')" id="softwareButton">Sviluppo software</button></li>
-                        <li><button onclick="showSkills('Other')" id="OtherdevButton">Altro</button></li>
+                        <li><button onclick="showSkills('webDevSkills')" id="webdevButton" class="iconBefore">Sviluppo Web</button> </li>
+                        <li ><button onclick="showSkills('ProgrammingSkill')" id="ProgrammingdevButton" class="iconBefore">Programmazione</button></li>
+                        <li><button onclick="showSkills('Develop')" id="softwareButton" class="iconBefore">Sviluppo software</button></li>
+                        <li><button onclick="showSkills('Other')" id="OtherdevButton" class="iconBefore">Altro</button></li>
+                        <li><button onclick="showSkills('Language')" id="LangButton" class="iconBefore">Lingue</button></li>
+
                     </ul>
                 </div>
                 <div class="skills" id="skillsContainer">
@@ -153,8 +156,77 @@
                             <li>Programmazioni di microcontrollori ESP-32</li>
                         </ul>
                     </div>
+                    <div class="skillCard Language">
+                        <h5>Lingue</h5>
+                        <dl>
+                            <dt class="iconBefore italy">Italiano:</dt>
+                            <dd>Madrelingua</dd>
+
+                            <dt class="iconBefore english">Inglese:</dt>
+                            <dd>ASCOLTO B2</dd>
+                            <dd>LETTURA B2</dd>
+                            <dd>SCRITTURA B2</dd>
+                            <dd>PRODUZIONE ORALE B2</dd>
+                            <dd>INTERAZIONE ORALE B2</dd>
+                        </dl>
+                        <p class="comment">/*Livelli: A1 e A2: Livello elementare B1 e B2: Livello intermedio C1 e C2: Livello avanzato*/</p>
+                    </div>
                 </div>
             </div>
+        </section>
+        <section class="SectionDefault">
+            <div class="sectionHeader headerSectionDefault"> <div id="ProjectsImage" class="imageTitle"></div>
+                <h2 class="roboto-regular">Progetti</h2></div>
+                <div class="SubSectionGroup">
+                    <div class="projectsDivider">
+                        <div class="sectionSubHeader"><div class="subHeaderIcon accademics"></div><h3>Progetti accademici</h3></div>
+                        <dl class="honourList">
+                            <dt class="projectTitle">All You Can Eat Sushi Brombeis</dt>
+                            <dd>Creazione di una web app per automatizzare il sistema di prenotazione tavolo e
+                                ordinazione dei piatti in un ristorante sushi.
+                            L'applicazione rispetta le regole di usabilità e accessibilità con un livello Doppia-A di conformita.</dd>
+                            <dd class="tecUsed">HTML</dd>
+                            <dd class="tecUsed">CSS</dd>
+                            <dd class="tecUsed">JavaScript</dd>
+                            <dd class="tecUsed">PHP</dd>
+                            <dd class="tecUsed">MYSQL</dd>
+                            <dd class="iconBefore tag">Progetto di gruppo</dd>
+                            <dd class="iconBefore link"><a href="https://github.com/Barutta02/TecWeb">Link</a></dd>
+                           
+                            <dt  class="projectTitle topDivider">Innovacity</dt>
+                            <dd>Sviluppo di un sistema di monitoraggio in tempo reale per sensori ambientali.</dd>
+                            <dd class="tecUsed">Docker</dd>
+                            <dd class="tecUsed">Docker-compose</dd>
+                            <dd class="tecUsed">Python</dd>
+                            <dd class="tecUsed">Faust</dd>
+                            <dd class="tecUsed">Apache Kafka</dd>
+                            <dd class="tecUsed">Confluent Schema Registry</dd>
+                            <dd class="tecUsed">ClickHouse</dd>
+                            <dd class="tecUsed">Grafana</dd>
+                            <dd class="tecUsed">SCRUM</dd>
+                            <dd class="tecUsed">Continuos Integration</dd>
+                            <dd class="tecUsed">GitHub Action</dd>
+                            <dd class="tecUsed">Testing (unità, integrazione, sistema, smoke test, performance, carico)</dd>
+                            <dd class="iconBefore tag">Progetto di gruppo</dd>
+                            <dd class="iconBefore link"><a href="https://byteops-swe.github.io/">Link</a></dd>
+
+                            <dt  class="projectTitle topDivider">IstantRide</dt>
+                            <dd>InstantRide è un'applicazione che permette di creare, modificare,cancellare e
+                                visualizzare i veicoli e i noleggi di un'attività di noleggio mezzi di trasporto.</dd>
+                            <dd class="tecUsed">C++</dd>
+                            <dd class="tecUsed">Qt</dd>
+                            <dd class="iconBefore link"><a href="https://github.com/Barutta02/QtProject/tree/main">Link</a></dd>
+
+
+                            <dt  class="projectTitle topDivider">Winterlift</dt>
+                            <dd>Realizzazione di una base di dati per la gestione efficiente degli impianti sciistici.</dd>
+                            <dd class="tecUsed">Postgres SQL</dd>
+                            <dd class="iconBefore tag">Progetto di gruppo</dd>
+                        </dl>
+                    </div>
+
+                </div>
+
         </section>
     </div>
     </main>

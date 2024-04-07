@@ -25,6 +25,7 @@
     --cardColorHover: #e4e4e6;
     --DefaultPadding: 1em;
     --headerPadding: 3em;
+    --commentColor: #0a930a;
 
 }
 
@@ -65,6 +66,10 @@ ul {
 
 ul li {
     text-decoration: none;
+}
+
+.comment {
+    color: var(--commentColor);
 }
 
 header {
@@ -247,6 +252,8 @@ dd {
     background-image: url('assets/icon/wreath.png');
 }
 
+
+
 .freeParagraph {
     padding: var(--DefaultPadding);
     text-align: justify;
@@ -272,17 +279,29 @@ dd {
     width: 200px;
 }
 
+.tag {
+    background-color: #f7d48b !important;
+}
+
+.link {
+    background-color: #83d5e3 !important;
+
+}
+
+.tag::before {
+    background-image: url(assets/icon/price-tag.png);
+}
+
+.link::before {
+    background-image: url(assets/icon/link.png);
+
+}
+
 .honourList {
     padding: var(--DefaultPadding);
 }
 
-/*SKILL SECTION*/
-#SkillSection {
-    text-align: -webkit-center;
-}
-
-#skillsImage {
-    background-image: url(assets/icon/skills.gif);
+.imageTitle {
     background-position: center;
     background-size: 40px;
     background-repeat: no-repeat;
@@ -291,7 +310,18 @@ dd {
     height: 50px;
 }
 
-.headerSkill {
+/*SKILL SECTION*/
+.SectionDefault {
+    text-align: -webkit-center;
+}
+
+
+#skillsImage {
+    background-image: url(assets/icon/skills.gif);
+}
+
+
+.headerSectionDefault {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -319,6 +349,7 @@ button {
     margin: .5em;
     border-radius: 10px;
     max-width: 700px;
+    text-align: left;
 }
 
 #categories {
@@ -332,19 +363,25 @@ button {
     padding: var(--DefaultPadding);
 }
 
-.skills li {
+.skills li,
+.tecUsed,
+.tag,
+.link {
     background-color: #e3e2ed;
     border-radius: 5px;
     padding: .2em;
     margin: .2em;
     display: inline-block;
+    padding-right: .5em;
+    padding-left: .5em;
 }
 
+.skills li:hover {
+    transform: scale(1.05);
+    transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s;
+}
 
-#webdevButton::before,
-#ProgrammingdevButton::before,
-#softwareButton::before,
-#OtherdevButton::before {
+.iconBefore::before {
     content: "";
     display: inline-block;
     width: 20px;
@@ -372,6 +409,47 @@ button {
 #OtherdevButton::before {
     background-image: url(assets/icon/skill-development.png);
 
+}
+
+#LangButton::before {
+    background-image: url(assets/icon/language.png);
+}
+
+.italy::before {
+    background-image: url(assets/icon/pinched-fingers.png);
+}
+
+.english::before {
+    background-image: url(assets/icon/english.png);
+}
+
+.skillCard dd {
+    padding-left: 2.5em;
+}
+
+/*Projects*/
+#ProjectsImage {
+    background-image: url(assets/icon/layers.png);
+}
+
+.subHeaderIcon.accademics {
+    background-image: url('assets/icon/graduation.png');
+}
+
+.projectsDivider {
+    text-align: left;
+}
+
+.projectTitle {
+    font-size: large;
+    padding-bottom: 1em;
+
+}
+
+.topDivider {
+    border-top: 2px solid var(--textColor);
+    margin-top: 1em;
+    padding-top: 1em;
 }
 
 /* Stili per schermi di larghezza massima 600px */
